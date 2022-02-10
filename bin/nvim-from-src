@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+currentDir="$(dirname "$(dirname "$(realpath "${BASH_SOURCE[0]}")")")"
+initFile="${currentDir}/init.vim"
+VIMINIT="$(printf 'source %s' "$initFile")"
+export VIMINIT
+
+# VIMRUNTIME=~/dev/external/neovim/runtime ~/tmp/nvim-from-src/bin/nvim \
+~/tmp/nvim-from-src/bin/nvim \
+    -i "${currentDir}/.config/nvim/shada/main.shada" \
+    "$@"
