@@ -1,4 +1,9 @@
 local dap = require 'dap'
+local keymap = require 'vim.keymap'
+local widgets = require('dap.ui.widgets')
+local utils = require('dap.utils')
+
+keymap.set({'x'}, ',dh', function() widgets.hover(utils.get_visual_selection_text) end, opts)
 
 dap.adapters.php = {
   type = 'executable',

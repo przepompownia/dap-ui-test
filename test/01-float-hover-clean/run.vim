@@ -1,12 +1,7 @@
 function! RunJob(phpfile)
   let l:command = 'php -dzend_extension=xdebug.so ' . a:phpfile
   echom 'Running job ' . l:command
-  call jobstart(l:command, #{
-        \ env: #{
-          \ XDEBUG_TRIGGER: "idekey=test",
-          \ XDEBUG_CONFIG: "log=/tmp/xdebug-test.log",
-          \ }
-        \ })
+  call jobstart(l:command)
 endfunction
 
 let phpFile='./test/fixture/foo.php'
@@ -17,5 +12,5 @@ sleep 500m
 call RunJob(phpFile)
 sleep 500m
 
-execute "normal 3Gz-vt\<Space>"
+execute "normal 4Gz-vi)"
 lua require'dapui'.eval()
