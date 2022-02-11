@@ -1,4 +1,5 @@
 set number
+set mouse=a
 colorscheme darkblue
 
 function! ClosePopupForTab() abort
