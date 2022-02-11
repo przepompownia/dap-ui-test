@@ -15,5 +15,8 @@ install-vscode-php-debug:
 
 start: gitconfig-include-local submodule-update install-vscode-php-debug
 
+test-visual-evaluation:
+	$(DIR)/bin/nvim-from-system -S ./test/01-float-hover-clean/run.vim test/fixture/foo.php
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
