@@ -12,6 +12,7 @@ submodule-update:
 
 install-vscode-php-debug:
 	$(DIR)/bin/vscode-php-debug install 1.23.0
+	$(DIR)/bin/vscode-php-debug setAsCurrent 1.23.0
 
 start: gitconfig-include-local submodule-update install-vscode-php-debug
 
