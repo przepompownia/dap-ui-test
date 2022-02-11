@@ -12,3 +12,4 @@
 /.config/vim/.viminfo
 /.config/vim/viminfo
 /.nvimlog
+/tools/

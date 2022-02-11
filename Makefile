@@ -10,7 +10,10 @@ gitconfig-include-local:
 submodule-update:
 	git su
 
-start: gitconfig-include-local submodule-update
+install-vscode-php-debug:
+	$(DIR)/bin/vscode-php-debug install 1.23.0
+
+start: gitconfig-include-local submodule-update install-vscode-php-debug
 
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
