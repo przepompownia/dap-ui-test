@@ -1,6 +1,4 @@
-# Portable vim environment
-
-## Goals
+## Goal
 - test dap-ui
 
 ## Install and configure extensions
@@ -12,8 +10,3 @@
 - Run `make test-visual-evaluation`
 - see plugin/dap*.lua for mappings
 - eval `$x + 1` on a visual selection using `,de` (dap-ui) and `,dh` (dap)
-
-## Running
-```sh
-./bin/nvim-from-system
-```
