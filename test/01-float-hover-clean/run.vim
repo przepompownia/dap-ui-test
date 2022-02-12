@@ -1,5 +1,5 @@
 function! RunJob(phpfile)
-  let l:command = 'php -dzend_extension=xdebug.so ' . a:phpfile
+  let l:command = 'php -c .php.ini ' . a:phpfile
   echom 'Running job ' . l:command
   call jobstart(l:command)
 endfunction
