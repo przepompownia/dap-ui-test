@@ -1,7 +1,7 @@
 function! RunJob(phpfile)
   let l:command = 'php -c .php.ini ' . a:phpfile
   echom 'Running job ' . l:command
-  call jobstart(l:command)
+  call jobstart(l:command, #{clear_env: v:true})
 endfunction
 
 let phpFile='./test/fixture/foo.php'
