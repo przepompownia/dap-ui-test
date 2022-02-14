@@ -9,6 +9,7 @@
 
 ## Run test
 - Run `make test-visual-evaluation`
+- Run `make test-close-hover-window`
 - see plugin/dap*.lua for mappings
 - eval `$x + 1` on a visual selection using `,de` (dap-ui) and `,dh` (dap)
 - observe `/tmp/xdebug.log` and dap.log (see `:help dap.set_log_level()`)

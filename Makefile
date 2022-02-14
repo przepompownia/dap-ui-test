@@ -19,5 +19,8 @@ start: gitconfig-include-local submodule-update install-vscode-php-debug
 test-visual-evaluation:
 	$(DIR)/bin/nvim-from-system -S ./test/01-float-hover-clean/run.vim test/fixture/foo.php
 
+test-close-hover-window:
+	$(DIR)/bin/nvim-from-system -S ./test/02-float-hover-clean/run.vim test/fixture/foo.php
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
