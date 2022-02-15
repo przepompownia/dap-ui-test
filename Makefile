@@ -3,6 +3,7 @@ MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-builtin-variables
 SHELL := /bin/bash
 DIR := ${CURDIR}
+nvim := nvim-from-system
 
 gitconfig-include-local:
 	git config --local include.path "$$(git rev-parse --show-toplevel)/.gitconfig"
@@ -17,10 +18,13 @@ install-vscode-php-debug:
 start: gitconfig-include-local submodule-update install-vscode-php-debug
 
 test-visual-evaluation:
-	$(DIR)/bin/nvim-from-system -S ./test/01-float-hover-clean/run.vim test/fixture/foo.php
+	$(DIR)/bin/$(nvim) -S ./test/01-float-hover-clean/run.vim test/fixture/foo.php
 
 test-close-hover-window:
-	$(DIR)/bin/nvim-from-system -S ./test/02-float-hover-clean/run.vim test/fixture/foo.php
+	$(DIR)/bin/$(nvim) -S ./test/02-float-hover-clean/run.vim test/fixture/foo.php
+
+cursor-position-outside-buffer:
+	$(DIR)/bin/$(nvim) -S ./test/03-cursor-position-outside-buffer/run.vim
 
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
