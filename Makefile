@@ -26,5 +26,8 @@ test-close-hover-window:
 cursor-position-outside-buffer:
 	$(DIR)/bin/$(nvim) -S ./test/03-cursor-position-outside-buffer/run.vim
 
+large-hover-content:
+	$(DIR)/bin/$(nvim) -S ./test/04-large-hover-content/run.vim
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
