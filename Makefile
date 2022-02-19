@@ -4,6 +4,7 @@ MAKEFLAGS += --no-builtin-variables
 SHELL := /bin/bash
 DIR := ${CURDIR}
 nvim := nvim-from-system
+vscodePhpDebugVersion := '1.24.0'
 
 gitconfig-include-local:
 	git config --local include.path "$$(git rev-parse --show-toplevel)/.gitconfig"
@@ -12,8 +13,8 @@ submodule-update:
 	git su
 
 install-vscode-php-debug:
-	$(DIR)/bin/vscode-php-debug install 1.23.0
-	$(DIR)/bin/vscode-php-debug setAsCurrent 1.23.0
+	$(DIR)/bin/vscode-php-debug install $(vscodePhpDebugVersion)
+	$(DIR)/bin/vscode-php-debug setAsCurrent $(vscodePhpDebugVersion)
 
 start: gitconfig-include-local submodule-update install-vscode-php-debug
 
