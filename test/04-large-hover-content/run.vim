@@ -10,6 +10,6 @@ lua require'dap'.continue()
 sleep 500m
 call RunJob(phpFile)
 sleep 500m
-lua require'dapui'.eval('$largeArray', {enter = true, context = 'repl'})
+lua require'dapui'.eval('$obj', {enter = true, context = 'repl'})
 
 botright vsplit term://tail -f /tmp/xdebug.log
