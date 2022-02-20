@@ -12,6 +12,7 @@ keymap.set({'n'}, ',db', dap.toggle_breakpoint, opts)
 keymap.set({'n'}, ',dc', dap.continue, opts)
 keymap.set({'n'}, ',du', dap.up, opts)
 keymap.set({'n'}, ',dd', dap.down, opts)
+keymap.set({'n'}, ',dx', dap.close, opts)
 
 dap.set_log_level('TRACE')
 
