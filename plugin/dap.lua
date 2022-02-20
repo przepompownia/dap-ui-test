@@ -3,6 +3,7 @@ local keymap = require 'vim.keymap'
 local widgets = require('dap.ui.widgets')
 local utils = require('dap.utils')
 
+local opts = {silent = true, noremap = true}
 keymap.set({'x'}, ',dh', function() widgets.hover(utils.get_visual_selection_text) end, opts)
 keymap.set({'n'}, ',dv', dap.step_over, opts)
 keymap.set({'n'}, ',di', dap.step_into, opts)
