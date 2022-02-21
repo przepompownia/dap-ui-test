@@ -30,5 +30,8 @@ cursor-position-outside-buffer:
 large-hover-content:
 	$(DIR)/bin/$(nvim) -S ./test/04-large-hover-content/run.vim
 
+anonymous-class:
+	$(DIR)/bin/$(nvim) -S ./test/06-anonymous-class/run.vim
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
