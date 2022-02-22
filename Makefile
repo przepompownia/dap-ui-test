@@ -34,5 +34,9 @@ anonymous-class:
 	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.24.0'
 	$(DIR)/bin/$(nvim) -S ./test/06-anonymous-class/run.vim
 
+anonymous-class-1.24.1:
+	$(MAKE) install-vscode-php-debug
+	$(DIR)/bin/$(nvim) -S ./test/07-anonymous-class-w-adapter-1.24/run.vim
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
