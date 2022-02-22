@@ -24,6 +24,7 @@ dap.adapters.php = {
 
 dap.configurations.php = {
   {
+    log = true,
     type = 'php',
     request = 'launch',
     name = 'Listen for XDebug',
@@ -33,6 +34,7 @@ dap.configurations.php = {
       max_children = 512,
       max_data = 1024,
       max_depth = 4,
+      extended_properties = 1,
     },
     breakpoints = {
       exception = {
@@ -45,3 +47,31 @@ dap.configurations.php = {
     },
   }
 }
+
+-- local debugWinId = nil
+-- local api = vim.api
+-- local function openTabForThread(threadId)
+--   if nil ~= debugWinId and api.nvim_win_is_valid(debugWinId) then
+--     api.nvim_set_current_win(debugWinId)
+--     return
+--   end
+
+--   vim.cmd('tabedit %')
+--   debugWinId = vim.fn.win_getid()
+--   require('dapui').open()
+-- end
+
+-- dap.listeners.before['event_stopped']['arctgx-dap-tab'] = function(session, body)
+--   openTabForThread(nil)
+-- end
+
+-- dap.listeners.after['event_thread']['arctgx-dap-tab'] = function(session, body)
+--   if body.reason == 'started' then
+--     openTabForThread(body.threadId)
+--     return
+--   end
+--   if body.reason == '' then
+--   else
+--     vim.notify('Reason ' .. body.reason)
+--   end
+-- end
