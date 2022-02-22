@@ -31,6 +31,7 @@ large-hover-content:
 	$(DIR)/bin/$(nvim) -S ./test/04-large-hover-content/run.vim
 
 anonymous-class:
+	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.24.0'
 	$(DIR)/bin/$(nvim) -S ./test/06-anonymous-class/run.vim
 
 check-requirements:
