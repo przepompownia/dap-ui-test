@@ -14,7 +14,7 @@ installAdapter() {
     cd "$dest"
     file="php-debug-${version}.vsix"
     curl -C - -OLR "https://github.com/xdebug/vscode-php-debug/releases/download/v${version}/${file}" || return
-    unzip "$file"
+    unzip -n "$file"
 }
 
 setAsCurrent() {
