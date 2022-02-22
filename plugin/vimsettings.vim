@@ -7,3 +7,5 @@ function! ClosePopupForTab() abort
         \ ->filter({_,v -> 'popup' ==# win_gettype(v)})
         \ ->map({_,v -> nvim_win_close(v, v:true)})
 endfunction
+
+nnoremap <Esc> call ClosePopupForTab()<CR>
