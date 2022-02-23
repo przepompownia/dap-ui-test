@@ -6,13 +6,25 @@ vscodeDir="${currentDir}/tools/vscode-php-debug"
 
 command="${1?install|run}"
 
+uninstallAdapter() {
+    declare dest version
+    version="${1}"
+    dest="${vscodeDir}/${version}"
+
+    rm -rv "$dest"
+}
+
 installAdapter() {
     declare dest file version
-    version="${1}"
+    version="${1?missing version}"
     dest="${vscodeDir}/${version}"
     mkdir -p "$dest"
     cd "$dest"
     file="php-debug-${version}.vsix"
+    if [[ -f $file ]]; then
+        printf '%s already exists' "$file" >&2
+        return
+    fi
     curl -C - -OLR "https://github.com/xdebug/vscode-php-debug/releases/download/v${version}/${file}" || return
     unzip -n "$file"
 }
@@ -47,5 +59,9 @@ case "$command" in
     run)
         version="${2:-current}"
         runAdapter "$version"
+        ;;
+    uninstall)
+        version="${2?missing version}"
+        uninstallAdapter "$version"
         ;;
 esac
