@@ -42,5 +42,9 @@ anonymous-class-1.24.2:
 	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.24.2'
 	$(DIR)/bin/$(nvim) -S ./test/07-anonymous-class-w-adapter-1.24/run.vim
 
+long-line-hover:
+	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.25.0'
+	$(DIR)/bin/$(nvim) -S ./test/08-long-line-hover/run.vim
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements
