@@ -3,4 +3,5 @@
 	url = https://github.com/mfussenegger/nvim-dap
 [submodule "pack/bundle/opt/nvim-dap-ui"]
 	path = pack/bundle/opt/nvim-dap-ui
-	url = https://github.com/rcarriga/nvim-dap-ui
+	url = https://github.com/przepompownia/nvim-dap-ui
+	branch = long-line-hover
