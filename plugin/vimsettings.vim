@@ -1,3 +1,4 @@
+set updatetime=300
 set number
 set mouse=a
 colorscheme darkblue
