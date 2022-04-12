@@ -16,22 +16,9 @@ dapui.setup({
   sidebar = {
     expand_lines = {
       enabled = true,
-      -- Additional (to vim.go.updatetime) delay after which the current line will be expanded
       delay = 0,
     },
-    -- You can change the order of elements in the sidebar
-    elements = {
-      -- Provide IDs as strings or tables with "id" and "size" keys
-      {
-        id = dapuiInit.elements.SCOPES,
-        size = 0.25, -- Can be float or integer > 1
-        expand_long_lines = true,
-      },
-      { id = dapuiInit.elements.BREAKPOINTS },
-      { id = dapuiInit.elements.STACKS },
-      { id = dapuiInit.elements.WATCHES },
-    },
     size = 40,
-    position = "left", -- Can be "left" or "right"
+    position = 'left',
   },
 })
