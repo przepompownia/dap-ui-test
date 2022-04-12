@@ -14,6 +14,11 @@ keymap.set({'n'}, ',ds', jumpToScopes, opts)
 keymap.set({'x'}, ',de', function() dapui.eval(nil, {enter = true, context = 'repl'}) end, opts)
 dapui.setup({
   sidebar = {
+    expand_lines = {
+      enabled = true,
+      -- Additional (to vim.go.updatetime) delay after which the current line will be expanded
+      delay = 0,
+    },
     -- You can change the order of elements in the sidebar
     elements = {
       -- Provide IDs as strings or tables with "id" and "size" keys
@@ -22,9 +27,9 @@ dapui.setup({
         size = 0.25, -- Can be float or integer > 1
         expand_long_lines = true,
       },
-      { id = dapuiInit.elements.BREAKPOINTS, size = 0.25, expand_long_lines = false },
-      { id = dapuiInit.elements.STACKS, size = 0.25, expand_long_lines = true },
-      { id = dapuiInit.elements.WATCHES, size = 0.25, expand_long_lines = true },
+      { id = dapuiInit.elements.BREAKPOINTS },
+      { id = dapuiInit.elements.STACKS },
+      { id = dapuiInit.elements.WATCHES },
     },
     size = 40,
     position = "left", -- Can be "left" or "right"
