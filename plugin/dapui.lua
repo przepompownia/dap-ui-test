@@ -13,12 +13,8 @@ keymap.set({'n'}, ',dt', dapui.toggle, opts)
 keymap.set({'n'}, ',ds', jumpToScopes, opts)
 keymap.set({'x'}, ',de', function() dapui.eval(nil, {enter = true, context = 'repl'}) end, opts)
 dapui.setup({
-  sidebar = {
-    expand_lines = {
-      enabled = true,
-      delay = 0,
-    },
-    size = 40,
-    position = 'left',
-  },
+  line_expansion = {
+    enabled = true,
+    delay = 0,
+  }
 })
