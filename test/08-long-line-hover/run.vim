@@ -1,5 +1,5 @@
 function! RunJob(phpfile)
-  call jobstart(['php', '-c'. '.php.ini', a:phpfile], #{clear_env: v:true})
+  call jobstart(['php', '-n', '-c'. '.php.ini', a:phpfile], #{clear_env: v:true})
 endfunction
 
 let fixtureDir = expand('<sfile>:p:h')
