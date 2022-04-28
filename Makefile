@@ -4,7 +4,7 @@ MAKEFLAGS += --no-builtin-variables
 SHELL := /bin/bash
 DIR := ${CURDIR}
 nvim := nvim-from-system
-vscodePhpDebugVersion := '1.25.0'
+vscodePhpDebugVersion := '1.26.1'
 
 gitconfig-include-local:
 	git config --local include.path "$$(git rev-parse --show-toplevel)/.gitconfig"
@@ -43,7 +43,7 @@ anonymous-class-1.24.2:
 	$(DIR)/bin/$(nvim) -S ./test/07-anonymous-class-w-adapter-1.24/run.vim
 
 long-line-hover:
-	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.25.0'
+	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.26.1'
 	$(DIR)/bin/$(nvim) -S ./test/08-long-line-hover/run.vim
 
 check-requirements:
