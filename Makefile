@@ -46,5 +46,9 @@ long-line-hover:
 	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.26.1'
 	$(DIR)/bin/$(nvim) -S ./test/08-long-line-hover/run.vim
 
+line-hover-extmarks-after-tabclose:
+	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.26.1'
+	$(DIR)/bin/$(nvim) -S ./test/09-extmarks/run.vim
+
 check-requirements:
 	$(DIR)/.config/bin/check-requirements

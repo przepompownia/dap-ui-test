@@ -4,4 +4,4 @@
 [submodule "pack/bundle/opt/nvim-dap-ui"]
 	path = pack/bundle/opt/nvim-dap-ui
 	url = https://github.com/przepompownia/nvim-dap-ui
-	branch = long-line-hover
+	branch = master
