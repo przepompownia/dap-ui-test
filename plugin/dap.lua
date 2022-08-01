@@ -83,11 +83,11 @@ end
 local opts = {silent = true, noremap = true}
 keymap.set({'n'}, ',dw', verboseGoToDebugWin, opts)
 keymap.set({'n'}, ',dc', closeDebugWin, opts)
-keymap.set({'x'}, ',dh', function() widgets.hover(utils.get_visual_selection_text) end, opts)
+keymap.set({'x', 'n'}, ',dh', widgets.hover, opts)
 keymap.set({'n'}, ',dv', dap.step_over, opts)
 keymap.set({'n'}, ',di', dap.step_into, opts)
 keymap.set({'n'}, ',do', dap.step_out, opts)
-keymap.set({'n'}, ',db', dap.toggle_breakpoint, opts)
+keymap.set({'n'}, ',dt', dap.toggle_breakpoint, opts)
 keymap.set({'n'}, ',dr', dap.continue, opts)
 keymap.set({'n'}, ',du', dap.up, opts)
 keymap.set({'n'}, ',dd', dap.down, opts)
