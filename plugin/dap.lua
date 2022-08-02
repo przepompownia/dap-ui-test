@@ -60,6 +60,8 @@ local function closeDebugWin()
     return
   end
   local tabNr = api.nvim_tabpage_get_number(api.nvim_win_get_tabpage(debugWinId))
+
+  dapui.close()
   vim.cmd('tabclose ' .. tabNr)
 end
 
@@ -73,7 +75,7 @@ local function openTabForThread()
     setlocal scrolloff=10
   ]])
   debugWinId = vim.fn.win_getid()
-  require('dapui').open()
+  dapui.open()
 end
 
 dap.listeners.before['event_stopped']['arctgx-dap-tab'] = function()
