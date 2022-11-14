@@ -4,7 +4,7 @@ MAKEFLAGS += --no-builtin-variables
 SHELL := /bin/bash
 DIR := ${CURDIR}
 nvim := nvim-from-system
-vscodePhpDebugVersion := '1.26.1'
+vscodePhpDebugVersion := '1.29.0'
 
 gitconfig-include-local:
 	git config --local include.path "$$(git rev-parse --show-toplevel)/.gitconfig"
