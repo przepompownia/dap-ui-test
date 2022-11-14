@@ -1,4 +1,4 @@
-.PHONY: gitconfig-include-local
+.PHONY: gitconfig-include-local submodule-update install-vscode-php-debug start cursor-position-outside-buffer
 MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-builtin-variables
 SHELL := /bin/bash
