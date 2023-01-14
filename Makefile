@@ -3,8 +3,8 @@ MAKEFLAGS += --no-builtin-rules
 MAKEFLAGS += --no-builtin-variables
 SHELL := /bin/bash
 DIR := ${CURDIR}
-nvim := nvim-from-system
-vscodePhpDebugVersion := '1.29.0'
+nvim := nvim-from-src
+vscodePhpDebugVersion := '1.30.0'
 
 gitconfig-include-local:
 	git config --local include.path "$$(git rev-parse --show-toplevel)/.gitconfig"
@@ -49,6 +49,10 @@ long-line-hover:
 line-hover-extmarks-after-tabclose:
 	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.26.1'
 	$(DIR)/bin/$(nvim) -S ./test/09-extmarks/run.vim
+
+virtual-text-callback:
+	$(MAKE) install-vscode-php-debug vscodePhpDebugVersion='1.30.0'
+	$(DIR)/bin/$(nvim) -S ./test/10-virtual-text-display-callback/run.vim
 
 check-requirements:
 	$(DIR)/.config/bin/check-requirements

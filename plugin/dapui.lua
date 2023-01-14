@@ -9,7 +9,7 @@ local function jumpToScopes()
   end
   vim.api.nvim_set_current_win(winId)
 end
-keymap.set({'n'}, ',dt', dapui.toggle, opts)
+keymap.set({'n'}, ',dg', dapui.toggle, opts)
 keymap.set({'n'}, ',ds', jumpToScopes, opts)
 keymap.set({'x'}, ',de', function() dapui.eval(nil, {enter = true, context = 'repl'}) end, opts)
 dapui.setup({

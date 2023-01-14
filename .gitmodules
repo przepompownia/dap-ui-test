@@ -5,3 +5,9 @@
 	path = pack/bundle/opt/nvim-dap-ui
 	url = https://github.com/przepompownia/nvim-dap-ui
 	branch = master
+[submodule "pack/bundle/opt/nvim-dap-virtual-text"]
+	path = pack/bundle/opt/nvim-dap-virtual-text
+	url = https://github.com/theHamsta/nvim-dap-virtual-text
+[submodule "pack/bundle/opt/nvim-treesitter"]
+	path = pack/bundle/opt/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
