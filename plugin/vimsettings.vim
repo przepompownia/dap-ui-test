@@ -2,6 +2,7 @@ set updatetime=300
 set number
 set mouse=a
 set termguicolors
+set noswapfile
 " colorscheme darkblue
 set signcolumn=auto:1-9
 

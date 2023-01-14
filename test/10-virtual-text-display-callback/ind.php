@@ -1,17 +1,19 @@
 <?php
 
-function foo()
+class X
 {
-    $a = ['a' => 1, 'b' => null];
-    xdebug_break();
-    $x = 1;
+    private int $bar = 1;
+
+    public function foo()
+    {
+        $this->bar = 2;
+        $a = ['a' => 1, 'b' => null];
+        xdebug_break();
+        $x = 1;
+    }
 }
 
-function bar()
-{
-    foo();
-}
+$x = new X();
 
-bar();
-
+$x->foo();
 echo '';
